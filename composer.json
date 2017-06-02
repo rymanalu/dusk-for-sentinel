@@ -1,0 +1,35 @@
+{
+    "name": "rymanalu/dusk-for-sentinel",
+    "description": "Laravel Dusk for Sentinel.",
+    "keywords": ["authentication", "cartalyst", "dusk", "laravel", "sentinel", "testing"],
+    "type": "library",
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/dusk": "^1.0",
+        "cartalyst/sentinel": "^2.0",
+        "illuminate/support": "~5.4",
+        "illuminate/contracts": "~5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7",
+        "mockery/mockery": "~0.9.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roni Yusuf Manalu",
+            "email": "rymanalu@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rymanalu\\DuskForSentinel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/User.php",
+            "tests/TestCase.php"
+        ]
+    }
+}
