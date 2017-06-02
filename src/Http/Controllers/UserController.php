@@ -2,7 +2,6 @@
 
 namespace Rymanalu\DuskForSentinel\Http\Controllers;
 
-use Exception;
 use Cartalyst\Sentinel\Sentinel;
 use Illuminate\Contracts\Config\Repository as Config;
 
