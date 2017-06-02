@@ -17,17 +17,17 @@ class DuskForSentinelServiceProvider extends DuskServiceProvider
     {
         Route::get('/_dusk/login/{userId}', [
             'middleware' => 'web',
-            'uses' => 'Rymanalu\DuskForSentinel\Http\Controllers\Dusk\UserController@login',
+            'uses' => 'Rymanalu\DuskForSentinel\Http\Controllers\UserController@login',
         ]);
 
         Route::get('/_dusk/logout', [
             'middleware' => 'web',
-            'uses' => 'Rymanalu\DuskForSentinel\Http\Controllers\Dusk\UserController@logout',
+            'uses' => 'Rymanalu\DuskForSentinel\Http\Controllers\UserController@logout',
         ]);
 
         Route::get('/_dusk/user', [
             'middleware' => 'web',
-            'uses' => 'Rymanalu\DuskForSentinel\Http\Controllers\Dusk\UserController@user',
+            'uses' => 'Rymanalu\DuskForSentinel\Http\Controllers\UserController@user',
         ]);
     }
 }
