@@ -1,6 +1,6 @@
 # Laravel Dusk for Sentinel
 
-This package override the `loginAs` method in [Laravel Dusk](https://github.com/laravel/dusk) so it can be used for Laravel project who using the [Sentinel](https://github.com/cartalyst/sentinel) package for the authentication, since the default implementation of that method is using the Laravel Authentication service.
+This package override the routes that used by `loginAs` method in [Laravel Dusk](https://github.com/laravel/dusk) so it can be used for Laravel project who using the [Sentinel](https://github.com/cartalyst/sentinel) package for the authentication, since the default implementation of that method is using the Laravel Authentication service.
 
 ## Installation
 First, install this package via the Composer package manager:
