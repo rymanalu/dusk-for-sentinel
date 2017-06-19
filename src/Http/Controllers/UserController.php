@@ -3,6 +3,7 @@
 namespace Rymanalu\DuskForSentinel\Http\Controllers;
 
 use Cartalyst\Sentinel\Sentinel;
+use Cartalyst\Sentinel\Users\EloquentUser;
 use Illuminate\Contracts\Config\Repository as Config;
 
 class UserController
@@ -15,9 +16,7 @@ class UserController
      */
     public function user(Sentinel $auth)
     {
-        $user = $auth->check();
-
-        if (! $user) {
+        if (! $user = $auth->check()) {
             return [];
         }
 
@@ -37,7 +36,7 @@ class UserController
      */
     public function login(Sentinel $auth, Config $config, $userId)
     {
-        $model = $config->get('cartalyst.sentinel.users.model', 'Cartalyst\Sentinel\Users\EloquentUser');
+        $model = $config->get('cartalyst.sentinel.users.model', EloquentUser::class);
 
         if (str_contains($userId, '@')) {
             $user = (new $model)->where('email', $userId)->first();
